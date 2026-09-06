@@ -1,0 +1,19 @@
+Match No.,Innings,Team,Player Name,BallCount,Position,Short Description,Pick,Throw,Runs,Overcount,Venue
+IPL2024,2,RCB,Virat Kohli,2.3,Cover,"Fielded cleanly, quick throw",Y,Y,1,2,Bengaluru
+IPL2024,2,RCB,Virat Kohli,5.1,Cover,"Fumbled the ball, wide throw",N,N,-2,5,Bengaluru
+IPL2024,2,RCB,Virat Kohli,8.4,Cover,Took a low catch,C,,0,8,Bengaluru
+IPL2024,2,RCB,Virat Kohli,11.2,Cover,Direct hit run out attempt,Y,DH,2,11,Bengaluru
+IPL2024,2,RCB,Virat Kohli,14.5,Cover,Dropped a sitter,DC,,-2,14,Bengaluru
+IPL2024,2,RCB,Virat Kohli,17.6,Cover,"Clean stop, good throw",Y,Y,1,17,Bengaluru
+IPL2024,2,CSK,MS Dhoni,3.2,Wicket Keeper,Collected byes cleanly,Y,Y,0,3,Bengaluru
+IPL2024,2,CSK,MS Dhoni,6.5,Wicket Keeper,Lightning stumping,S,,0,6,Bengaluru
+IPL2024,2,CSK,MS Dhoni,9.3,Wicket Keeper,"Good take, quick return",Y,Y,1,9,Bengaluru
+IPL2024,2,CSK,MS Dhoni,12.1,Wicket Keeper,Missed run out chance,Y,MR,-1,12,Bengaluru
+IPL2024,2,CSK,MS Dhoni,15.4,Wicket Keeper,Broke stumps for run out,Y,RO,2,15,Bengaluru
+IPL2024,2,CSK,MS Dhoni,18.2,Wicket Keeper,Routine take,Y,Y,0,18,Bengaluru
+IPL2024,2,CSK,Ravindra Jadeja,1.5,Backward Point,"Sharp stop, good throw",Y,Y,1,1,Bengaluru
+IPL2024,2,CSK,Ravindra Jadeja,4.6,Backward Point,Direct hit run out,Y,DH,2,4,Bengaluru
+IPL2024,2,CSK,Ravindra Jadeja,7.2,Backward Point,Diving catch,C,,0,7,Bengaluru
+IPL2024,2,CSK,Ravindra Jadeja,10.3,Backward Point,"Clean pick, good throw",Y,Y,1,10,Bengaluru
+IPL2024,2,CSK,Ravindra Jadeja,13.6,Backward Point,"Clean pick, good throw",Y,Y,1,13,Bengaluru
+IPL2024,2,CSK,Ravindra Jadeja,16.4,Backward Point,Relay throw run out,Y,RO,2,16,Bengaluru
