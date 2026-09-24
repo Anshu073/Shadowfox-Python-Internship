@@ -1,5 +1,4 @@
 # Cricket Fielding Analysis Data Collection Objective
-
 import pandas as pd
 
 raw_data = [
