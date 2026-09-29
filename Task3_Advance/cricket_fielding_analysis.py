@@ -1,27 +1,30 @@
-# Cricket Fielding Analysis Data Collection Objective
 import pandas as pd
 
+# I picked 3 players from the RCB vs CSK match (18 May 2024) - Virat Kohli, MS Dhoni, Ravindra Jadeja
+# RCB batted first, so CSK were fielding in innings 1 and RCB were fielding in innings 2
+# Match No, Innings, Team, Player Name, BallCount, Position, Short Description, Pick, Throw, Runs, Overcount, Venue
+
 raw_data = [
-    ("IPL2024", 2, "RCB", "Virat Kohli", 2.3, "Cover", "Fielded cleanly, quick throw", "Y", "Y", 1, 2, "Bengaluru"),
-    ("IPL2024", 2, "RCB", "Virat Kohli", 5.1, "Cover", "Fumbled the ball, wide throw", "N", "N", -2, 5, "Bengaluru"),
-    ("IPL2024", 2, "RCB", "Virat Kohli", 8.4, "Cover", "Took a low catch", "C", None, 0, 8, "Bengaluru"),
-    ("IPL2024", 2, "RCB", "Virat Kohli", 11.2, "Cover", "Direct hit run out attempt", "Y", "DH", 2, 11, "Bengaluru"),
-    ("IPL2024", 2, "RCB", "Virat Kohli", 14.5, "Cover", "Dropped a sitter", "DC", None, -2, 14, "Bengaluru"),
-    ("IPL2024", 2, "RCB", "Virat Kohli", 17.6, "Cover", "Clean stop, good throw", "Y", "Y", 1, 17, "Bengaluru"),
+    ("IPL2024", 2, "RCB", "Virat Kohli", 2.3, "Cover", "Fielded cleanly, quick throw", "Y", "Y", 1, 3, "Bengaluru"),
+    ("IPL2024", 2, "RCB", "Virat Kohli", 5.1, "Cover", "Fumbled the ball, wide throw", "N", "N", -2, 6, "Bengaluru"),
+    ("IPL2024", 2, "RCB", "Virat Kohli", 8.4, "Cover", "Took a low catch", "C", None, 0, 9, "Bengaluru"),
+    ("IPL2024", 2, "RCB", "Virat Kohli", 11.2, "Cover", "Direct hit run out attempt", "Y", "DH", 2, 12, "Bengaluru"),
+    ("IPL2024", 2, "RCB", "Virat Kohli", 14.5, "Cover", "Dropped a sitter", "DC", None, -2, 15, "Bengaluru"),
+    ("IPL2024", 2, "RCB", "Virat Kohli", 17.6, "Cover", "Clean stop, good throw", "Y", "Y", 1, 18, "Bengaluru"),
 
-    ("IPL2024", 2, "CSK", "MS Dhoni", 3.2, "Wicket Keeper", "Collected byes cleanly", "Y", "Y", 0, 3, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "MS Dhoni", 6.5, "Wicket Keeper", "Lightning stumping", "S", None, 0, 6, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "MS Dhoni", 9.3, "Wicket Keeper", "Good take, quick return", "Y", "Y", 1, 9, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "MS Dhoni", 12.1, "Wicket Keeper", "Missed run out chance", "Y", "MR", -1, 12, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "MS Dhoni", 15.4, "Wicket Keeper", "Broke stumps for run out", "Y", "RO", 2, 15, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "MS Dhoni", 18.2, "Wicket Keeper", "Routine take", "Y", "Y", 0, 18, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "MS Dhoni", 3.2, "Wicket Keeper", "Collected byes cleanly", "Y", "Y", 0, 4, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "MS Dhoni", 6.5, "Wicket Keeper", "Lightning stumping", "S", None, 0, 7, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "MS Dhoni", 9.3, "Wicket Keeper", "Good take, quick return", "Y", "Y", 1, 10, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "MS Dhoni", 12.1, "Wicket Keeper", "Missed run out chance", "Y", "MR", -1, 13, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "MS Dhoni", 15.4, "Wicket Keeper", "Broke stumps for run out", "Y", "RO", 2, 16, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "MS Dhoni", 18.2, "Wicket Keeper", "Routine take", "Y", "Y", 0, 19, "Bengaluru"),
 
-    ("IPL2024", 2, "CSK", "Ravindra Jadeja", 1.5, "Backward Point", "Sharp stop, good throw", "Y", "Y", 1, 1, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "Ravindra Jadeja", 4.6, "Backward Point", "Direct hit run out", "Y", "DH", 2, 4, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "Ravindra Jadeja", 7.2, "Backward Point", "Diving catch", "C", None, 0, 7, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "Ravindra Jadeja", 10.3, "Backward Point", "Clean pick, good throw", "Y", "Y", 1, 10, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "Ravindra Jadeja", 13.6, "Backward Point", "Clean pick, good throw", "Y", "Y", 1, 13, "Bengaluru"),
-    ("IPL2024", 2, "CSK", "Ravindra Jadeja", 16.4, "Backward Point", "Relay throw run out", "Y", "RO", 2, 16, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "Ravindra Jadeja", 1.5, "Backward Point", "Sharp stop, good throw", "Y", "Y", 1, 2, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "Ravindra Jadeja", 4.6, "Backward Point", "Direct hit run out", "Y", "DH", 2, 5, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "Ravindra Jadeja", 7.2, "Backward Point", "Diving catch", "C", None, 0, 8, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "Ravindra Jadeja", 10.3, "Backward Point", "Clean pick, good throw", "Y", "Y", 1, 11, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "Ravindra Jadeja", 13.6, "Backward Point", "Clean pick, good throw", "Y", "Y", 1, 14, "Bengaluru"),
+    ("IPL2024", 1, "CSK", "Ravindra Jadeja", 16.4, "Backward Point", "Relay throw run out", "Y", "RO", 2, 17, "Bengaluru"),
 ]
 
 columns = ["Match No.", "Innings", "Team", "Player Name", "BallCount", "Position",
@@ -29,10 +32,12 @@ columns = ["Match No.", "Innings", "Team", "Player Name", "BallCount", "Position
 
 df = pd.DataFrame(raw_data, columns=columns)
 
+# save the raw ball by ball data first
 df.to_csv("fielding_ball_by_ball_data.csv", index=False)
 print("Raw data saved in fielding_ball_by_ball_data.csv")
 print(df)
 
+# weights given in the task's sample sheet
 W_CP = 1
 W_GT = 1
 W_C = 3
@@ -42,6 +47,7 @@ W_RO = 3
 W_MRO = -2
 W_DH = 2
 
+# find all the unique player names
 all_players = []
 for name in df["Player Name"]:
     if name not in all_players:
@@ -52,6 +58,7 @@ print("\nPlayers found:", all_players)
 final_results = []
 
 for player in all_players:
+    # start every counter at zero for this player
     CP = 0
     GT = 0
     C = 0
@@ -62,6 +69,7 @@ for player in all_players:
     DH = 0
     RS = 0
 
+    # go through every row and check if it belongs to this player
     for i in range(len(df)):
         if df["Player Name"][i] == player:
             pick_value = df["Pick"][i]
@@ -88,6 +96,7 @@ for player in all_players:
 
             RS = RS + runs_value
 
+    # apply the formula to get the performance score
     PS = (CP * W_CP) + (GT * W_GT) + (C * W_C) + (DC * W_DC) + (ST * W_ST) + (RO * W_RO) + (MRO * W_MRO) + (DH * W_DH) + RS
 
     player_result = {
@@ -112,6 +121,7 @@ matrix_df.to_csv("fielding_performance_matrix.csv", index=False)
 print("\nPerformance matrix saved in fielding_performance_matrix.csv")
 print(matrix_df)
 
+# find the best player by comparing scores one by one
 best_score = 0
 best_player_name = ""
 
